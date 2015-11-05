@@ -1,0 +1,31 @@
+{
+  "name": "js-99",
+  "version": "0.0.0",
+  "description": "ninety-nine javascripts problems",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leonardiwagner/js-99.git"
+  },
+  "keywords": [
+    "ninenty",
+    "nine",
+    "javascript",
+    "problems"
+  ],
+  "author": "Wagner Leonardi",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/leonardiwagner/js-99/issues"
+  },
+  "homepage": "https://github.com/leonardiwagner/js-99#readme",
+  "dependencies": {
+    "z": "0.0.3"
+  },
+  "devDependencies": {
+    "mocha": "^2.3.3"
+  }
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="js99App">
+<link>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="bower_components/bootswatch/cosmo/bootstrap.min.css" rel="stylesheet" >
+    <title>JS-99: Ninety-Nine JavaScript Problems</title>
+    <style>
+        body{
+            line-height: 1.5em;
+        }
+        article {
+            padding: 2%;
+        }
+        article:nth-child(odd) {
+
+
+        }
+        article:nth-child(even) {
+            background-color: #FFFBDD;
+            border: 1px solid #F0DB4F;
+        }
+        article h2 {
+            margin: 0;
+        }
+        article pre {
+             margin: 0;
+         }
+
+        .btn {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body ng-controller="AppController">
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <h1>JS-99: Ninety-Nine JavaScript Problems <!-- Place this tag where you want the button to render. -->
+            <a class="github-button" href="https://github.com/leonardiwagner/js-99" data-style="mega" data-count-href="/leonardiwagner/js-99/stargazers" data-count-api="/repos/leonardiwagner/js-99#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star leonardiwagner/js-99 on GitHub">Star on GitHub</a></h1>
+        <hr style="width: 100%; color: black; height: 1px; background-color:black;" />
+        <!-- Place this tag where you want the button to render. -->
+
+        <!-- Place this tag right after the last button or just before your close body tag. -->
+        <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+
+        <p>These are JavaScript translation of famous functional programming series Ninety-Nine problems already done in <a href="https://wiki.haskell.org/H-99:_Ninety-Nine_Haskell_Problems" target="_blank">Haskell</a>, <a href="http://www.ic.unicamp.br/~meidanis/courses/mc336/2006s2/funcional/L-99_Ninety-Nine_Lisp_Problems.html" target="_blank">List</a>, <a href="https://sites.google.com/site/prologsite/prolog-problems">Prolog</a> and <a href="http://aperiodic.net/phil/scala/s-99/">Scala</a>.
+
+        <p>
+            <a href="https://github.com/leonardiwagner/z" target="_blank">
+                <img src="https://raw.githubusercontent.com/leonardiwagner/z/master/z-logo.png" style="float:left;width: 50px;margin-right: 10px;">
+            </a>
+            Even though JavaScript has some functional aspects, probably no one did this before due the lack of some functional features, such as pattern matching.
+            <br>
+            The ideal is to use only pure JavaScript (vanilla) for problems solutions, however we're using <a href="https://github.com/leonardiwagner/z" target="_blank">z library</a> <b>for pattern matching only</b>.
+            <br>
+            To install z in your Node.js project is simple: <code>npm install z</code> and require on your JavaScript file <code>require('z')</code>
+            <br>
+            z provides the <code>$match</code> method on Arrays that makes pattern matching able. Everything else on solutions are just plain JavaScript!
+        </p>
+    </div>
+</div>
+
+<article ng-repeat="problem in problems">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <h2>Problem {{$index + 1}}</h2>
+            <p>{{problem.description}}</p>
+            <span>Example: </span> <code>{{problem.example}}</code>
+            <br>
+            <span>Should result: </span> <code>{{problem.result}}</code>
+            <br>
+            <button type="submit" class="btn btn-primary">Show solution</button>
+            <pre ng-show="problem.showSolution">
+                {{problem.solution}}
+            </pre>
+        </div>
+    </div>
+</article>
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

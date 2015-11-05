@@ -1,0 +1,26 @@
+[
+  {
+    "description": "Find the last emement of a list",
+    "example": "myLast [1,2,3,4]",
+    "result": "1",
+    "solution": "yLast :: [a] -> a myLast [] = error 'No end for empty lists!' myLast [x] = x myLast (_:xs) = myLast xs"
+  },
+  {
+    "description": " Find the last but one element of a list.",
+    "example": "myButLast [1,2,3,4]",
+    "result": "3",
+    "solution": "yLast :: [a] -> a myLast [] = error 'No end for empty lists!' myLast [x] = x myLast (_:xs) = myLast xs"
+  },
+  {
+    "description": "Find the last emement of a list",
+    "example": "myLast [1,2,3,4]",
+    "result": "1",
+    "solution": "yLast :: [a] -> a myLast [] = error 'No end for empty lists!' myLast [x] = x myLast (_:xs) = myLast xs"
+  },
+  {
+    "description": " Find the last but one element of a list.",
+    "example": "myButLast [1,2,3,4]",
+    "result": "3",
+    "solution": "yLast :: [a] -> a myLast [] = error 'No end for empty lists!' myLast [x] = x myLast (_:xs) = myLast xs"
+  }
+]
