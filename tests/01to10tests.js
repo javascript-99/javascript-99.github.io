@@ -57,6 +57,51 @@ describe('problems 01 to 10', function () {
     myReverse([1,2,3,4]).should.eql([4,3,2,1])
   });
 
+  it('problem 06', function(){
+    var myIsPalindrome = function(list){
+      return list.$match(
+        function ()  { return true },
+        function (_) { return true },
+        function (x, xs) {
+          return x == xs.$last() ? myIsPalindrome(xs.$init()) : false
+        }
+      )
+    }
+
+    myIsPalindrome("madamimadam").should.equal(true)
+    myIsPalindrome([1,2,3]).should.equal(false)
+  })
+
+  it('problem 08', function(){
+    var myFlatten = function(list){
+      return list.$match(
+        function (x) {
+          return Array.isArray(x) ? myFlatten(x) : x
+        },
+        function (x, xs) {
+          var head = Array.isArray(x) ? x : [x]
+          return head.concat(myFlatten(xs))
+        }
+      )
+    }
+
+    myFlatten ([1, [2, [3, 4], 5]]).should.eql([1, 2, 3, 4, 5])
+  })
+
+  it.only('problem 09', function(){
+    var myCompress = function(list) {
+      return list.$match(
+        function (x)       { return [x] },
+        function(x, y, xs) { return (x == y) ? myCompress([x].concat(xs))
+                                             : [x].concat(myCompress([y].concat(xs))) }
+      )
+    }
+
+    myCompress([1, 1, 1, 1, 2, 3, 4, 1, 1, 4, 5, 5, 5, 5, 5]).should.equal([1, 2, 3, 1, 4, 5])
+  })
+
+
+
 
 
 });

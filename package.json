@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/leonardiwagner/js-99#readme",
   "dependencies": {
-    "z": "0.0.3"
+    "z": "0.0.4"
   },
   "devDependencies": {
     "chai": "^3.4.0",

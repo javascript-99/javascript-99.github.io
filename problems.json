@@ -58,6 +58,48 @@
     "example": "encode 'aaaabccaadeeee'",
     "result": "[(4,'a'),(1,'b'),(2,'c'),(2,'a'),(1,'d'),(4,'e')]",
     "solution": ""
-  }
+  },
+  {
+    "description": "Modify the result of problem 10 in such a way that if an element has no duplicates it is simply copied into the result list. Only elements with duplicates are transferred as (N E) lists.",
+    "example": "encode 'aaaabccaadeeee'",
+    "result": "[(4,'a'),(1,'b'),(2,'c'),(2,'a'),(1,'d'),(4,'e')]",
+    "solution": ""
+  },
+  {
+    "description": "Decode a run-length encoded list. \n Given a run-length code list generated as specified in problem 11. Construct its uncompressed version.",
+    "example": "encode 'aaaabccaadeeee'",
+    "result": "[(4,'a'),(1,'b'),(2,'c'),(2,'a'),(1,'d'),(4,'e')]",
+    "solution": ""
+  },
+  {
+    "description": "Run-length encoding of a list (direct solution). \n Implement the so-called run-length encoding data compression method directly. I.e. don't explicitly create the sublists containing the duplicates, as in problem 9, but only count them. As in problem P11, simplify the result list by replacing the singleton lists (1 X) by X",
+    "example": "encodeDirect 'aaaabccaadeeee'",
+    "result": "[Multiple 4 'a',Single 'b',Multiple 2 'c',Multiple 2 'a',Single 'd',Multiple 4 'e']",
+    "solution": ""
+  },
+  {
+    "description": "Duplicate the elements of a list.",
+    "example": "dupli [1, 2, 3]",
+    "result": "[1,1,2,2,3,3]",
+    "solution": ""
+  },
+  {
+    "description": "Replicate the elements of a list a given number of times.",
+    "example": "repli 'abc' 3",
+    "result": "'aaabbbccc'",
+    "solution": ""
+  },
+  {
+    "description": "Drop every N'th element from a list.",
+    "example": "dropEvery 'abcdefghik' 3",
+    "result": "'abdeghk'",
+    "solution": ""
+  },
+  {
+    "description": "Split a list into two parts; the length of the first part is given. \n Do not use any predefined predicates.",
+    "example": "dropEvery 'abcdefghik' 3",
+    "result": "'abdeghk'",
+    "solution": ""
+  },
 
 ]
