@@ -1,2 +1,2 @@
-# J-99
+# JS-99
 Ninety-Nine Javascript Problems
