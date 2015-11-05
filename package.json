@@ -4,7 +4,7 @@
   "description": "ninety-nine javascripts problems",
   "main": "index.js",
   "scripts": {
-    "test": "npm test"
+    "test": "node_modules/mocha/bin/mocha tests/."
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,7 @@
     "z": "0.0.3"
   },
   "devDependencies": {
+    "chai": "^3.4.0",
     "mocha": "^2.3.3"
   }
 }

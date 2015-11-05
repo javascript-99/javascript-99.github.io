@@ -11,4 +11,8 @@ var js99App = angular.module('js99App', [])
     $scope.problems = response.data;
   });
 
+  $scope.showSolution = function(problem){
+    problem.isSolutionVisible = !problem.isSolutionVisible;
+  }
+
 });

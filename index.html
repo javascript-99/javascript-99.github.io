@@ -9,12 +9,21 @@
         body{
             line-height: 1.5em;
         }
+        h1 iframe{
+            float:right
+        }
         article {
             padding: 2%;
+        }
+        article h2{
+            font-weight: bold;
         }
         article:nth-child(odd) {
 
 
+        }
+        p{
+            text-align: justify;
         }
         article:nth-child(even) {
             background-color: #FFFBDD;
@@ -29,6 +38,9 @@
 
         .btn {
             margin-top: 10px;
+            cursor: pointer;
+            width: 25%;
+            min-width: 150px;
         }
     </style>
 </head>
@@ -50,13 +62,13 @@
             <a href="https://github.com/leonardiwagner/z" target="_blank">
                 <img src="https://raw.githubusercontent.com/leonardiwagner/z/master/z-logo.png" style="float:left;width: 50px;margin-right: 10px;">
             </a>
-            Even though JavaScript has some functional aspects, probably no one did this before due the lack of some functional features, such as pattern matching.
-            <br>
-            The ideal is to use only pure JavaScript (vanilla) for problems solutions, however we're using <a href="https://github.com/leonardiwagner/z" target="_blank">z library</a> <b>for pattern matching only</b>.
+            Even though JavaScript has some functional aspects, probably no one did this before due the lack of some functional features, specially pattern matching.
+
+            The ideal is to use only pure JavaScript for problems solving, however we're using <a href="https://github.com/leonardiwagner/z" target="_blank">z library</a> <b>just for pattern matching only</b>.
             <br>
             To install z in your Node.js project is simple: <code>npm install z</code> and require on your JavaScript file <code>require('z')</code>
-            <br>
-            z provides the <code>$match</code> method on Arrays that makes pattern matching able. Everything else on solutions are just plain JavaScript!
+
+            which provides the <code>$match</code> method on Arrays that makes pattern matching able. Everything else on solutions are just plain JavaScript!
         </p>
     </div>
 </div>
@@ -71,10 +83,8 @@
             <br>
             <span>Should result: </span> <code>{{problem.result}}</code>
             <br>
-            <button type="submit" class="btn btn-primary">Show solution</button>
-            <pre ng-show="problem.showSolution">
-                {{problem.solution}}
-            </pre>
+            <button type="submit" class="btn btn-primary" ng-click="showSolution(problem)">{{ problem.isSolutionVisible ? 'Hide solution' : 'Show solution'}}</button>
+            <pre ng-show="problem.isSolutionVisible">{{problem.solution}}</pre>
         </div>
     </div>
 </article>
