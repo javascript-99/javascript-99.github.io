@@ -1,5 +1,4 @@
 # JS-99
-======
 These are JavaScript translation of famous functional programming series Ninety-Nine Problems already done in Haskell, List, Prolog and Scala: http://leonardiwagner.github.io/js-99  
 
 # Some solutions are missing
