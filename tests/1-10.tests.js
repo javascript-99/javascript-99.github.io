@@ -41,7 +41,13 @@ describe('1-10', () => {
   it('problem 7', () => {
     const problem = testHelper.getProblem(7);
     const result = eval(`problem.${problem.example}`);
-    result.should.equals(problem.result);
+    result.should.deep.equals(problem.result);
+  });
+
+  it('problem 8', () => {
+    const problem = testHelper.getProblem(8);
+    const result = eval(`problem.${problem.example}`);
+    result.should.deep.equals(problem.result);
   });
 
 
