@@ -1,14 +1,15 @@
 {
-  "name": "js-99",
-  "version": "0.0.0",
+  "name": "javascript-99.github.io",
+  "version": "0.0.1",
   "description": "ninety-nine javascripts problems",
   "main": "index.js",
   "scripts": {
-    "test": "node_modules/mocha/bin/mocha tests/."
+    "start": "",
+    "test": ""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/leonardiwagner/js-99.git"
+    "url": "git+https://github.com/javascript-99/javascript-99.github.io.git"
   },
   "keywords": [
     "ninenty",
@@ -19,14 +20,12 @@
   "author": "Wagner Leonardi",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/leonardiwagner/js-99/issues"
+    "url": "https://github.com/javascript-99/javascript-99.github.io/issues"
   },
-  "homepage": "https://github.com/leonardiwagner/js-99#readme",
+  "homepage": "https://github.com/javascript-99/javascript-99.github.io#readme",
   "dependencies": {
-    "z": "0.0.5"
   },
   "devDependencies": {
-    "chai": "^3.4.0",
-    "mocha": "^2.3.3"
+
   }
 }
