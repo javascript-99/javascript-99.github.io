@@ -1,30 +1,17 @@
 import React from 'react';
+import { connect } from 'react-redux'
+import { toggleSolution } from '../actions/exercise'
 
-export class JsExercise extends React.Component{
-    constructor(props){
-      super(props);
-      this.state = {
-        answer: false
-      }
+const Exercise = (props) => (console.log(props),(
+<div className="exercise">
+  <h3 className="exercise__title">{props.title}</h3>
+  <p className="exercise__description">{props.description}</p>
+  <button onClick={() => props.toggleSolution()}>Submit</button>
+  {props.showAnswer ? <p className="exercise__solution">{props.solution}</p> : undefined}
+</div>
+))
 
-      this.showAnswer = this.showAnswer.bind(this);
-    }
-
-    showAnswer() {
-      this.setState({ answer : !this.state.answer })
-    }
-
-    render() {
-      return(
-        <div className="exercise">
-          <h3 className="exercise__title">{this.props.title}</h3>
-          <p className="exercise__description">{this.props.description}</p>
-          <button onClick={this.showAnswer}>Submit</button>
-          {this.state.answer ? <p className="exercise__solution">{this.props.solution}</p> : undefined}
-        </div>
-      )
-    }
-}
-
-//mudar a nomenclatura
-//fazer o css
+export default connect(
+  (state) => state,
+  {toggleSolution}
+)(Exercise)
