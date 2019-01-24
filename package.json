@@ -3,8 +3,9 @@
   "version": "0.0.1",
   "description": "ninety-nine javascripts problems",
   "main": "index.js",
-  "dependencies": {},
   "devDependencies": {
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
     "react-scripts": "^2.1.3"
   },
   "scripts": {

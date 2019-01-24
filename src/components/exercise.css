@@ -1,0 +1,12 @@
+.example-box {
+  font-family: 'Josefin Slab', serif;
+  font-weight: normal;
+  font-size: 1rem;
+  color: blue;
+  background-color: lightgrey;
+  max-width: 30rem;
+}
+
+button {
+
+}

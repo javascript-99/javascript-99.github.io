@@ -11,22 +11,20 @@ export class JsExercise extends React.Component{
     }
 
     showAnswer() {
-      alert('Solve the problem!')
-      this.setState({ answer : true })
+      this.setState({ answer : !this.state.answer })
     }
 
     render() {
       return(
-        <div>
-          <h3>{this.props.title}</h3>
-          <p>{this.props.question}</p>
-          <p className="example-box">{this.props.example}</p>
+        <div className="exercise">
+          <h3 className="exercise__title">{this.props.title}</h3>
+          <p className="exercise__description">{this.props.description}</p>
           <button onClick={this.showAnswer}>Submit</button>
+          {this.state.answer ? <p className="exercise__solution">{this.props.solution}</p> : undefined}
         </div>
       )
     }
 }
 
-//state true ou false pro botao
 //mudar a nomenclatura
 //fazer o css
