@@ -1,0 +1,17 @@
+@import './components/_variables.scss';
+
+body {
+  background-image: linear-gradient(#ffd9b3, #ffecb3);
+}
+
+#root {
+  display: grid;
+  margin: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 5rem;
+}
+
+.header {
+  grid-column: 1 / 4;
+}

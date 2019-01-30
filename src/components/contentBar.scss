@@ -1,0 +1,26 @@
+@import '_variables.scss';
+
+.content-bar {
+  h2 {
+    font-family: $main-title-font;
+    font-size: 1.4rem;
+    color: $js-brown-color;
+    text-shadow: 2px 2px 2px $js-yellow-color;
+    margin-left: 1rem;
+  }
+  a {
+    font-family: $description-font;
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: black;
+
+    &:hover {
+      font-size: 1.4rem;
+      color: $orange-color;
+    }
+  }
+  li {
+    font-weight: bold;
+    list-style-type: circle;
+  }
+}
