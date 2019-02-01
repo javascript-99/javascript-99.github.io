@@ -14,9 +14,6 @@ const Exercise = (props) => {
   </div>
   )
 }
-  
 
-export default connect(
-  (state) => state,
-  {toggleSolution}
-)(Exercise)
+
+export default connect((state, ownProps) => { console.log("state", state); console.log("ownProps", ownProps); return state }, {toggleSolution})(Exercise)
