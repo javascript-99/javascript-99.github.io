@@ -1,4 +1,4 @@
-import React from 'react';
+import React description e solution vaziasfrom 'react';
 import { connect } from 'react-redux'
 import { toggleSolution } from '../actions/exercise'
 
