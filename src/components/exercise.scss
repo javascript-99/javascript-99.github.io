@@ -1,6 +1,7 @@
 @import '_variables.scss';
 
 .exercise {
+  grid-column: 2 / 3;
   .exercise__title {
     font-family: $description-font;
     font-weight: bold;

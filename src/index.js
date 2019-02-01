@@ -13,17 +13,22 @@ import './components/exercise.scss'
 import './components/header.scss'
 import './components/contentBar.scss'
 import './index.scss'
+import exercises from './exercises/1'
 
 const store = createStore(exerciseReducers)
+
+
+const getExercises = (exercises) => exercises.map(
+  (exercise) => <Exercise title={exercise.title}
+  description={exercise.description}
+  solution="4" />
+)
 
 ReactDOM.render(
   <Provider store={store}>
     <Header />
     <ContentsBar />
-    <Exercise
-    title="1) Find the last element of a list."
-    description="myLast([1,2,3,4])"
-    solution="4" />
+    {getExercises(exercises)}
   </Provider>,
   document.getElementById('root')
 );
